@@ -4,8 +4,6 @@ jobs:
   Compilation:
     runs-on: ubuntu-latest
     steps:
-      - name: Phase de compilation
-        uses: appleboy/ssh-action@master
-        with:
-          script: |
-            cd $HOME
+      - name: Compilation
+        run: |
+          ls
