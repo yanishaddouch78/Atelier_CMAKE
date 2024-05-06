@@ -6,4 +6,6 @@ jobs:
     steps:
       - name: Compilation
         run: |
-          ls
+          git clone https://github.com/${{ github.repository }}.git
+          cd ${{ github.repository }}
+          tree
