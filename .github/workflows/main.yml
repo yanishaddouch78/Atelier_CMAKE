@@ -7,5 +7,5 @@ jobs:
       - name: Compilation
         run: |
           git clone https://github.com/${{ github.repository }}.git
-          cd ${{ github.repository }}
+          ls
           tree
