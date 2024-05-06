@@ -1,11 +1,11 @@
 name: Automatisation des tests
 on: push
 jobs:
-  Connexion:
+  Compilation:
     runs-on: ubuntu-latest
     steps:
       - name: Phase de compilation
         uses: appleboy/ssh-action@master
         with:
           script: |
-            cd $HOME/www/
+            cd $HOME
