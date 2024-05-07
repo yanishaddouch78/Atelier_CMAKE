@@ -77,7 +77,7 @@ L'utilité des scripts d'actions (C'est à dire des scripts exécutés lors des 
 ---------------------------------------------------------------------------------------------
 Séquence 3 : Exercice
 ---------------------------------------------------------------------------------------------
-Objectif : Ajouter une fonction au carré  
+Objectif : Ajouter une fonction au Carré  
 Difficulté : Moyenne (~60 minutes)
 ---------------------------------------------------------------------------------------------
 Dans cet exercice vous devez modifier votre code C afin de créer et tester une nouvelle fonction au "Carré".  
@@ -89,7 +89,7 @@ Indice : Les fichiers à modifier sont les suivants
   - src/main.c
   - src/lib/calculator.c
   - include/calculator.h
-et pour l'automatisation des tests, le fichier CMakeLists.txt
+  - et pour l'automatisation des tests, le fichier CMakeLists.txt
     
 Notions acquises de cette séquence :  
 Vous avez vu dans cette séquence comment mettre en place de l'industrialisation continue.  
