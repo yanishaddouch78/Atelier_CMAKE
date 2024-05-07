@@ -7,7 +7,7 @@ Cet atelier a pour objectif de vous apprendre à créer des actions Github pour 
 -------------------------------------------------------------------------------------------------------
 Séquence 1 : GitHUB
 -------------------------------------------------------------------------------------------------------
-Objectif : Création d'un Repository GitHUB pour travailler avec son projet  
+Objectif : Création d'un Repository GitHUB  
 Difficulté : Très facile (~10 minutes)
 -------------------------------------------------------------------------------------------------------
 GitHUB est une plateforme en ligne utilisée pour stocker le code de son programme.
@@ -30,34 +30,30 @@ Vous avez appris lors de cette séquence à créer des Repository pour stocker e
 ---------------------------------------------------
 Séquence 2 : Création d'une action GitHub
 ---------------------------------------------------
-Objectif : Créer un script pour automatiser vos test 
-Difficulté : Faible (~10 minutes)
+Objectif : Créer un script pour automatiser vos tests 
+Difficulté : Faible (~15 minutes)
 ---------------------------------------------------
 
-Rendez-vous sur **https://www.alwaysdata.com/fr/**  
-  
-Remarque : **Attention à bien vous rappeler de vos Login/Password** lors de la création de votre compte site car vous en aurez besoin plus tard pour la création de vos Secrets GitHUB.  
-  
-Voici une vidéo d'accompagnement pour vous aider dans cette séquence de création d'un site sur Alwaysdata : [Vidéo Alwaysdata](https://youtu.be/6cuHjy8n968)  
-  
-**Procédure :**  
-1° - Créez votre compte Alwaysdata (gratuit jusqu'à 100Mo, aucune carte nécéssaire).  
-2° - Depuis la console d'administration (Le panel d'administration de Alwaysdata) :  
- . 2.1 - Cliquez sur "Sites" (Colonne de gauche) puis **supprimer votre site PHP** (via l'icone de la Poubelle).  
- . 2.2 - **Installer ensuite une application Flask** (Bouton **+ Installer une application**).  
- . . 2.2.1 Adresses = utilisez le sous-domaine qui vous appartient que vous trouverez dans l'information " Les sous-domaines suivants vous appartiennent et sont actuellement inutilisés : {Site}.alwaysdata.net  
- . . 2.2.2 Répertoire d'installation = **/www/flask**  
- . 2.2.3 N'oubliez pas d'Accepter les conditions.  
-3° - Autoriser les connexions SSH :  
- . 3.1 - Cliquez sur SSH (Accès distant).  
- . 3.2 - Modifier les paramètres de votre utilisateur.  
- . 3.3 - Définissez si besion un nouveau mot de passe.  
- . 3.4 - Cliquez sur **Activer la connexion par mot de passe**.  
-  
-**Travail demandé :** Mettre en ligne votre application Flask "Hello World !" et **copier l'URL de votre site dans la discussion public**.  
-  
-Notions acquises lors de cette séquence :  
-Vous avez créer un hébergement (gratuit) et découvert également que vous pouvez installer bien d'autres applications (Django, Drupal, Jenkins, Magento, Symphony, etc...). Les perspectives sont nombreuses.
+Dans votre repository GitHUB, créer un fichier **.github/workflows/tests.yml** et y copier le code suivant :
+```
+name: Automatisation des tests
+on: push
+jobs:
+  Compilation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compilation
+        run: |
+          last_directory=$(basename ${{ runner.workspace }})
+          git clone https://github.com/${{ github.repository }}.git
+          cd ./$last_directory
+          mkdir build
+          cd build
+          cmake ..
+          make
+          make test
+```
+C'est fini !
 
 ---------------------------------------------------------------------------------------------
 Séquence 3 : Les Actions GitHUB (Industrialisation Continue)
