@@ -13,6 +13,5 @@ jobs:
           cd build
           cmake ..
           make
-          tree
           make test
           
