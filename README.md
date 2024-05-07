@@ -62,7 +62,7 @@ add_test(t3 src/calculator mul 5 5)
 add_test(t4 src/calculator div 1 5)
 ```
 
-Vous pouvez observer le résutat dans les log de votre Action :  
+Vous pouvez observer le résutat de vos tests dans les logs de votre Action :  
   
 ![Screenshot of Action's log](Compilation.png)
 
