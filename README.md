@@ -31,7 +31,7 @@ Vous avez appris lors de cette séquence à créer des Repository pour stocker e
 Séquence 2 : Création d'une action GitHub
 ---------------------------------------------------
 Objectif : Créer un script pour automatiser vos tests 
-Difficulté : Faible (~15 minutes)
+Difficulté : Simple (~20 minutes)
 ---------------------------------------------------
 
 Dans votre repository GitHUB, créer un fichier **.github/workflows/tests.yml** et y copier le code suivant :
@@ -61,6 +61,11 @@ add_test(t2 src/calculator sub 3 -2)
 add_test(t3 src/calculator mul 5 5)
 add_test(t4 src/calculator div 1 5)
 ```
+
+Vos pouvez observer le résutat dans les log de votre Action :  
+<picture>
+  <source srcset="Compilation.png">
+</picture>
 
 ---------------------------------------------------------------------------------------------
 Séquence 3 : Les Actions GitHUB (Industrialisation Continue)
