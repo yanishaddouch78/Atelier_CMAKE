@@ -53,8 +53,8 @@ jobs:
           make
           make test
 ```
-C'est fini !  
-La serie de tests présent dans votre fichier CMakeLists.txt à la racine de votre projet sera automatiquement executé à chaque Commit de votre projet (à chaque modification)  
+**C'est fini !**  
+La serie de tests présent dans votre fichier CMakeLists.txt à la racine de votre projet sera automatiquement executée à chaque Commit de votre projet (à chaque modification)  
 ```
 add_test(t1 src/calculator add 2 3)
 add_test(t2 src/calculator sub 3 -2)
