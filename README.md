@@ -75,7 +75,7 @@ Dans le script que nous venons de voir à l'instant, celui-ci compile le code C 
 L'utilité des scripts d'actions (C'est à dire des scripts exécutés lors des Commits) est très importante mais sortes malheureusement du cadre de cet atelier faute de temps. Toutefois, je vous invites à découvrir cet outil via les différentes sources du Web (Google, ChatGPT, etc..).  
 
 ---------------------------------------------------------------------------------------------
-Séquence 3 : Exercice
+Séquence 3 : Exercice 1
 ---------------------------------------------------------------------------------------------
 Objectif : Ajouter une fonction au Carré  
 Difficulté : Moyenne (~60 minutes)
@@ -95,15 +95,30 @@ Notions acquises de cette séquence :
 Vous avez vu dans cette séquence comment mettre en place de l'industrialisation continue.  
   
 ---------------------------------------------------
-Séquence 4 : Créer la base de données sur votre serveur
+Séquence 4 : Votre premier pipeline
 ---------------------------------------------------
-Objectif : Créer la base de données SQLite sur votre serveur  
+Objectif : Créer votre pipeline de jobs  
 Difficulté : Faible (~10 minutes)
 ---------------------------------------------------
-1° - Connectez vous en SSH à votre serveur Alwaysdata via l'adresse suivante :**https://ssh-{compte}.alwaysdata.net**. Remarque importante, {compte] est à remplacer par votre compte Alwaysdata. C'est à dire le compte que vous avez utilisé pour renseigner votre secret GitHUB USERNAME.   
-2° - Une fois connecté, depuis de la console SSH, executez la commande suivante : **cd www/flask** puis **python3 create_db.py**  
-Votre base de données est à présent opérationnelle sur votre serveur (Le fichier database.db à été créé dans votre répertoire sur le serveur)
-Vous pouvez, si vous le souhaitez, tappez la commande **ls** dans votre console pour voir la présence de la base de données.
+Automatiser vos tests via le fichier CMakeLists.txt c'est bien mais vous souhaiteriez peut-être avoir plus de contrôle dans l'execution de ses tests. Exemple, pouvoir paralléliser ses tests, ou poursuivre des tests même lorsqu'un test est en echec.  
+
+Copier/Coller le code ci-dessous à la suite de votre fichier tests.yml et observez le résultats dans vos Actions Github.  
+```
+  Test_Add:
+    runs-on: ubuntu-latest
+    needs: Compilation
+    steps:
+      - name: Test fonction add
+        run: |
+          last_directory=$(basename ${{ runner.workspace }})
+          git clone https://github.com/${{ github.repository }}.git
+          cd ./$last_directory
+          mkdir build
+          cd build
+          cmake ..
+          make
+          ./src/calculator add 10 5
+```
 
 LES ROUTES (API)
 -------------------------------------------
