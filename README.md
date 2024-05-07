@@ -72,8 +72,6 @@ Créer votre première Action GitHub et observez le résultat dans les logs de v
 Vous avez vu dans cette séquence comment créer des Actions GiHUB pour automatiser vos tests.  
 Dans le script que nous venons de voir à l'instant, celui-ci compile le code C dans un premier temps puis exécute une série de tests présent dans le fichier CMakeLists.txt via la commande make test. A noter que tout les fichiers .yml déposés dans le répertoire .github/workflows/ de votre projet seront systématiquement exécutés à chaque Commit réalisé.    
 
-L'utilité des scripts d'actions (C'est à dire des scripts exécutés lors des Commits) est très importante mais sortes malheureusement du cadre de cet atelier faute de temps. Toutefois, je vous invites à découvrir cet outil via les différentes sources du Web (Google, ChatGPT, etc..).  
-
 ---------------------------------------------------------------------------------------------
 Séquence 3 : Exercice 1
 ---------------------------------------------------------------------------------------------
@@ -126,21 +124,13 @@ Objectif : Paralléliser vos tests
 Difficulté : Moyenne (~30 minutes)
 ---------------------------------------------------
 Vous allez dans cet exercice paralléliser tous vos tests afin d'obtenir le résultat ci-dessous :    
-
-
   
+![Screenshot Pipeline](Pipeline.png)    
+
 ---------------------------------------------------
-Séquence 6 : Le projet de bibliothèque
+Capitalisation
 ---------------------------------------------------
-Objectif : Créer une application de biliothèque  
-Difficulté : Moyenne (~180 minutes)
----------------------------------------------------
-Votre projet consiste à present à concevoir et développer une application de gestion de bibliothèque moderne qui simplifie le processus de prêt et de retour de livres. Les fonctionnalités attendues dans le cadre de ce projet sont les suivantes :  
-•	L’enregistrement et la suppression de livres.  
-•	La recherche de livres disponibles.  
-•	L'emprunt possible d'un livre par un utilisateur.  
-•	La gestion des utilisateurs.  
-•	La gestion des stocks.  
-Votre travail est de modifier votre code afin de répondre aux besoins définis ci-dessus.
-L'application exploitera des API pour interagir avec la base de données et un contrôle d'accès Utilisateur/Administrateur doit être mis en place.  
-L’application pourra être enrichie avec des fonctionnalités supplémentaires telles que des recommandations de livres, des notifications pour les retours en retard, ou encore des rapports statistiques sur l'utilisation des livres pour améliorer l'expérience utilisateur et la gestion de la bibliothèque.  
+Vous avez apris au travers de cet atelier comment créer et automatiser des tests grâce aux actions Github. Les actions Github sont des outils très puissants pour les devellopeurs. Vous pouvez à l'aide des actions, compiler, tester ou déployer vos solutions en production.  
+
+L'utilité des scripts d'actions (C'est à dire des scripts exécutés lors des Commits) est très importante mais sortes malheureusement du cadre de cet atelier faute de temps. Toutefois, je vous invites à découvrir cet outil via les différentes sources du Web (Google, ChatGPT, etc..).  
+  
