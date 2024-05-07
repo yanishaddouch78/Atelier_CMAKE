@@ -70,31 +70,30 @@ Créer votre première Action GitHub et observez le résultat dans les logs de v
 
 **Notions acquises de cette séquence**    
 Vous avez vu dans cette séquence comment créer des Actions GiHUB pour automatiser vos tests.  
-Dans le script que nous venons de voir à l'instant, celui-ci compile le code C dans un premier temps puis exécute une série de tests présent dans le fichier CMakeLists.txt via la commande make test.  
+Dans le script que nous venons de voir à l'instant, celui-ci compile le code C dans un premier temps puis exécute une série de tests présent dans le fichier CMakeLists.txt via la commande make test. A noter que tout les fichiers .yml déposés dans le répertoire .github/workflows/ de votre projet seront systématiquement exécutés à chaque Commit réalisé.    
 
----------------------------------------------------------------------------------------------
-Séquence 3 : Les Actions GitHUB (Industrialisation Continue)
----------------------------------------------------------------------------------------------
-Objectif : Automatiser la mise à jour de votre hébergement Alwaysdata  
-Difficulté : Moyenne (~15 minutes)
----------------------------------------------------------------------------------------------
-Dans le Repository GitHUB que vous venez de créer précédemment lors de la séquence 1, vous avez un fichier intitulé CICD.yml et qui est déposé dans le répertoire .github/workflows. Ce fichier a pour objectif d'automatiser le déploiement de votre code sur votre site Alwaysdata. Pour information, c'est ce que l'on appel des Actions GitHUB. Ce sont des scripts qui s'exécutent automatiquement lors de chaque Commit dans votre projet (C'est à dire à chaque modification de votre code). Ces scripts (appelés actions) sont au format yml qui est un format structuré proche de celui d'XML.  
-
-Pour utiliser cette Action (CICD.yml), **vous avez besoin de créer des secrets dans GitHUB** afin de ne pas divulguer des informations sensibles aux internautes de passage dans votre Repository comme vos login et password par exemple.  
-
-Pour ce projet Métriques, **vous avez 4 secrets à créer** dans votre Repository GitHUB :  
-**USERNAME** = Le login qui est utilisé pour la connexion SSH.  
-**PASSWORD** = Le mot de passe qui est utilisé pour la connexion SSH.  
-**ALWAYSDATA_TOKEN** = Le token est à créer depuis l'interface d'administration Alwaysdata. Cliquez sur votre profil en haut à droite, puis sur 'Profil' puis sur 'Gérer les tokens'. Laissez le champ "Adresses IP autorisées" vide. Dans le cas contraire vous limiteriez les connexions seulement à une adresse IP. Pour le champ Application* mettez "Metriques" par exemple.  
-**ALWAYSDATA_SITE_ID** = Vous trouverez l'ID de votre site depuis l'interface d'administration Alwaysdata dans les paramètres de votre site (dans le titre #XXXXX) XXXXX étant l'ID de votre site. Ne prenez pas le # mais juste les chiffres.  
-  
-Voici une vidéo pour vous expliquer le processus de création de vos secrets dans GitHUB : [Création des secrets](https://youtu.be/pi80zRdrJyQ)  
-Vous pouvez à présent **lancer une action pour mettre en ligne votre solution**.  
-  
-Notions acquises de cette séquence :  
-Vous avez vu dans cette séquence comment créer des secrets GiHUB afin de mettre en place de l'industrialisation continue.  
 L'utilité des scripts d'actions (C'est à dire des scripts exécutés lors des Commits) est très importante mais sortes malheureusement du cadre de cet atelier faute de temps. Toutefois, je vous invites à découvrir cet outil via les différentes sources du Web (Google, ChatGPT, etc..).  
 
+---------------------------------------------------------------------------------------------
+Séquence 3 : Exercice
+---------------------------------------------------------------------------------------------
+Objectif : Ajouter une fonction au carré  
+Difficulté : Moyenne (~60 minutes)
+---------------------------------------------------------------------------------------------
+Dans cet exercice vous devez modifier votre code C afin de créer et tester une nouvelle fonction au "Carré".  
+L'appel de la fonction est le suivant : **src/calculator car 5** (et doit retournée la valeur 25)  
+
+**Travail demandé :**  
+Modifiez votre code afin de créer et tester cette nouvelle fonction au carré.  
+Indice : Les fichiers à modifier sont les suivants  
+  - src/main.c
+  - src/lib/calculator.c
+  - include/calculator.h
+et pour l'automatisation des tests, le fichier CMakeLists.txt
+    
+Notions acquises de cette séquence :  
+Vous avez vu dans cette séquence comment mettre en place de l'industrialisation continue.  
+  
 ---------------------------------------------------
 Séquence 4 : Créer la base de données sur votre serveur
 ---------------------------------------------------
