@@ -64,13 +64,13 @@ add_test(t4 src/calculator div 1 5)
 
 Vous pouvez observer le résutat de vos tests dans les logs de votre Action :  
   
-![Screenshot of Action's log](Compilation.png)
+![Screenshot of Action's log](Compilation.png)  
 **Travail demandé**  
-Créer votre première Action GitHub et observez le résultat dans les log de vos Actions.  
+Créer votre première Action GitHub et observez le résultat dans les logs de vos Actions.  
 
 **Notions acquises de cette séquence**    
 Vous avez vu dans cette séquence comment créer des Actions GiHUB pour automatiser vos tests.  
-Dans le script que nous venons de voir à l'instant, celui-ci compile le code C dans un premier temps puis exécute une série de tests présent dans le fichier CMakeLists.txt.  
+Dans le script que nous venons de voir à l'instant, celui-ci compile le code C dans un premier temps puis exécute une série de tests présent dans le fichier CMakeLists.txt via la commande make test.  
 
 ---------------------------------------------------------------------------------------------
 Séquence 3 : Les Actions GitHUB (Industrialisation Continue)
