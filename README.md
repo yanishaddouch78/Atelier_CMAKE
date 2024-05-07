@@ -30,7 +30,7 @@ Vous avez appris lors de cette séquence à créer des Repository pour stocker e
 ---------------------------------------------------
 Séquence 2 : Création d'une action GitHub
 ---------------------------------------------------
-Objectif : Créer un script pour automatiser vos tests 
+Objectif : Créer un script pour automatiser vos tests  
 Difficulté : Simple (~20 minutes)
 ---------------------------------------------------
 
