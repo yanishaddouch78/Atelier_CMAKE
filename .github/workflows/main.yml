@@ -11,3 +11,4 @@ jobs:
           cd ./$last_directory
           ls
           tree
+          cmake --version
