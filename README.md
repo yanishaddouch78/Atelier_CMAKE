@@ -62,10 +62,8 @@ add_test(t3 src/calculator mul 5 5)
 add_test(t4 src/calculator div 1 5)
 ```
 
-Vos pouvez observer le résutat dans les log de votre Action :  
-<picture>
-  <source srcset="Compilation.png">
-</picture>
+Vous pouvez observer le résutat dans les log de votre Action :  
+![Screenshot of Action's log](Compilation.png)
 
 ---------------------------------------------------------------------------------------------
 Séquence 3 : Les Actions GitHUB (Industrialisation Continue)
