@@ -102,7 +102,7 @@ Difficulté : Faible (~10 minutes)
 ---------------------------------------------------
 Automatiser vos tests via le fichier CMakeLists.txt c'est bien mais vous souhaiteriez peut-être avoir plus de contrôle dans l'execution de ses tests. Exemple, pouvoir paralléliser ses tests, ou poursuivre des tests même lorsqu'un test est en echec.  
 
-Copier/Coller le code ci-dessous à la suite de votre fichier tests.yml et observez le résultats dans vos Actions Github.  
+Copier/Coller le code ci-dessous à la suite de votre fichier tests.yml et observez le résultats dans vos Actions Github (et dans les logs).  
 ```
   Test_Add:
     runs-on: ubuntu-latest
@@ -119,42 +119,15 @@ Copier/Coller le code ci-dessous à la suite de votre fichier tests.yml et obser
           make
           ./src/calculator add 10 5
 ```
-
-LES ROUTES (API)
--------------------------------------------
-Votre solution est à présent opérationnelle. Vous pouvez testez les routes (API) comme suit :  
-  
-https://{Votre_URL}**/**  
-Pointe sur le fichier helloWorld d'accueil  
-
-https://{Votre_URL}**/lecture**  
-L'accès est conditionné à un contrôle d'accès  
-
-https://{Votre_URL}**/authentification**  
-Page d'authentification (admin, password)  
-
-https://{Votre_URL}**/fiche_client/1**  
-Permet de faire un filtre sur un client. Vous pouvez changer la valeur de 1 par le N° du client de votre choix  
-
-https://{Votre_URL}**/consultation/**  
-Permet de consutler la base de données  
-
-https://{Votre_URL}**/enregistrer_client**  
-API pour enregistrer un nouveau client  
-
 ---------------------------------------------------
-Séquence 5 : Exercices
+Séquence 5 : Exercice 2
 ---------------------------------------------------
-Objectif : Travailler votre code  
-Difficulté : Moyenne (~60 minutes)
+Objectif : Paralléliser vos tests  
+Difficulté : Moyenne (~30 minutes)
 ---------------------------------------------------
-**Exercice 1 : Création d'une nouvelle fonctionnalité**    
-Créer une nouvelle route dans votre application afin de faire une recherche sur la base du nom d'un client.  
-Cette fonctionnalité sera accéssible via la route suivante : **/fiche_nom/**  
+Vous allez dans cet exercice paralléliser tous vos tests afin d'obtenir le résultat ci-dessous :    
 
-**Exercice 2 : Protection**  
-Cette nouvelle route "/fiche_nom/" est soumise à un contrôle d'accès User. C'est à dire différent des login et mot de passe administrateur.  
-Pour accéder à cette fonctionnalité, l'utilisateur sera authentifié sous les login et mot de passe suivant : **user/12345**
+
   
 ---------------------------------------------------
 Séquence 6 : Le projet de bibliothèque
