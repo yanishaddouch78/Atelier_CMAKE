@@ -34,7 +34,7 @@ Objectif : Créer un script pour automatiser vos tests
 Difficulté : Simple (~20 minutes)
 ---------------------------------------------------
 
-Dans votre repository GitHUB, créer un fichier **.github/workflows/tests.yml** et y copier le code suivant :
+Dans votre repository GitHUB, créer un fichier **.github/workflows/tests.yml** et y copier le code ci-dessous (Remarque : Attention à bien mettre le point devant le répertoire .github) :
 ```
 name: Automatisation des tests
 on: push
