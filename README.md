@@ -127,6 +127,11 @@ Vous allez dans cet exercice paralléliser tous vos tests afin d'obtenir le rés
   
 ![Screenshot Pipeline](Pipeline.png)    
 
+Puis pour finir ajoutez un tout dernier job "Deploy". Ce dernier job ne fera qu'un echo "Déploiement de la solution".  
+Pour ce tout dernier exercice, vous devierez obtenir le résultat ci-dessous :  
+
+![Screenshot Pipeline](Pipeline2.png)    
+  
 ---------------------------------------------------
 Capitalisation
 ---------------------------------------------------
