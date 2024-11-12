@@ -1,4 +1,4 @@
-name: Automatisation des tests
+name: Automatisation des tests et déploiement
 on: push
 jobs:
   Compilation:
@@ -31,9 +31,9 @@ jobs:
           ./src/calculator add 10 5
           
   Test_div:
-      runs-on: ubuntu-latest
-      needs: Compilation
-      steps:
+    runs-on: ubuntu-latest
+    needs: Compilation
+    steps:
       - name: Test fonction div
         run: |
           last_directory=$(basename ${{ runner.workspace }})
@@ -46,9 +46,9 @@ jobs:
           ./src/calculator div 10 5
              
   Test_mul:
-      runs-on: ubuntu-latest
-      needs: Compilation
-      steps:
+    runs-on: ubuntu-latest
+    needs: Compilation
+    steps:
       - name: Test fonction mul
         run: |
           last_directory=$(basename ${{ runner.workspace }})
@@ -61,9 +61,9 @@ jobs:
           ./src/calculator mul 10 5
   
   Test_sub:
-      runs-on: ubuntu-latest
-      needs: Compilation
-      steps:
+    runs-on: ubuntu-latest
+    needs: Compilation
+    steps:
       - name: Test fonction sub
         run: |
           last_directory=$(basename ${{ runner.workspace }})
@@ -76,9 +76,9 @@ jobs:
           ./src/calculator sub 10 5
 
   Test_squa:
-      runs-on: ubuntu-latest
-      needs: Compilation
-      steps:
+    runs-on: ubuntu-latest
+    needs: Compilation
+    steps:
       - name: Test fonction squa
         run: |
           last_directory=$(basename ${{ runner.workspace }})
@@ -103,4 +103,4 @@ jobs:
           last_directory=$(basename ${{ runner.workspace }})
           git clone https://github.com/${{ github.repository }}.git
           cd ./$last_directory/build
-          scp -r * $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH 
+          scp -r * $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH
